@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --cor_primaria: #0071df;
+    --cor_secundaria: #f4b908;
+    --cor_terciaria: #ff0071;
+    --cor_fundo: #ffffff;
+    --cor_whatsapp: #25d366;
+
+    --fonte_titulo: "Krona One", sans-serif;
+    --fonte_texto:"Montserrat", sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+
+.botao__whatsapp{
+    width: 3.125rem;
+    height: 4.25rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 3.5rem;
+    z-index: 9999;
+}
+
+.botao__whatsapp img{
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+}
+
+.imagem__padrao{
+    opacity: 1;
+}
+
+.imagem__padrao:hover{
+    opacity: 0;
+}
+
+.imagem__hover{
+    opacity: 0;
+}
+
+.imagem__hover:hover{
+    opacity: 1;
+}
+
+
+.selecao__unidade{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--cor_primaria);
+    color: var(--cor_fundo);
+    padding: 5rem 0 15rem 0;
+    border-radius: 1rem;
+}
+
+.selecao__unidade__texto{
+    display: flex;
+    align-items: center;
+    font-family: var(--fonte_texto);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.container__unidades{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 100px;
+    font-family: var(--fonte_texto);
+}
+
+.whatsapp__unidades{
+    margin-top: 2rem;
+    display: inline-block;
+    width: 9.375rem;
+    height: 3.75rem;
+    background-image: url("imagens/fale-conosco.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+
+.whatsapp__unidades:hover{
+    background-image: url(imagens/fale-conosco-hover.png);
+}
+
+/*inicio_navegação*/
+.logo{
+    height: auto;
+}
+
+.navegacao{
+    padding: 0 0 1% 20%;
+    background-color: var(--cor_fundo);
+    font-family: var(--fonte_texto);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.navegacao__menu{
+    padding: 1% 0 0 0;
+    display: flex;
+    gap: 50px;
+}
+
+.navegacao__menu__home{
+    margin-top: 3.8rem;
+    text-decoration: none;
+    color: var(--cor_primaria);
+}
+
+.navegacao__menu__home:hover{
+   color: #66b3ff;
+}
+
+.navegacao__menu__quem__somos{
+    margin-top: 3.8rem;
+    text-decoration: none;
+    color: var(--cor_secundaria);
+}
+
+.navegacao__menu__quem__somos:hover{
+   color: #f8ce4e;
+}
+
+.navegacao__menu__servicos{
+    margin-top: 3.8rem;
+    text-decoration: none;
+    color: var(--cor_terciaria);
+}
+
+.navegacao__menu__servicos:hover{
+   color: #f8539c;
+}
+/*fim_navegação*/
+
+/*inicio_propaganda*/
+
+.conteudo__propaganda{
+    background-color: var(--cor_primaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--fonte_texto);
+    font-size: 1.3rem;
+    color: var(--cor_fundo);
+    padding: 0 8%;
+    border-radius: 1rem;
+}
+
+.conteudo__propaganda__texto{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 0 0 0 5%;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.whatsapp {
+    margin-top: 2rem;
+    display: inline-block;
+    width: 15.625rem;
+    height: 5.3125rem;
+    background-image: url("imagens/whatsapp-orçamento.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+
+.whatsapp:hover{
+    background-image: url(imagens/whatsapp-orçamento-inverso.png);
+}
+
+.imagem__inicio{
+    padding: 3% 15% 0 0;
+    border-radius: 60px;
+}
+
+/*fim_propaganda*/
+
+/*inicio_quem_somos_(home_page)*/
+
+.conteudo__pagina{
+    font-family: var(--fonte_texto);
+    font-weight: 600;
+    padding: 0 4%;
+}
+
+.conteudo__quem__somos{
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem__sobre__ctc{
+    width: 37.5rem;
+    height: 32.5rem;
+}
+
+.quem__somos__texto{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 2rem;
+    margin-right: 10rem;
+    gap: 40px;
+}
+
+/*fim_quem_somos_(home_page)*/
+
+/*inicio_serviços_(home_page)*/
+
+.home__servicos{
+    background-color: var(--cor_primaria);
+    font-family: var(--fonte_texto);
+    color: var(--cor_fundo);
+    padding: 5rem 0 5rem 5rem;
+    border-radius: 1rem;
+}
+
+.servicos__grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-right: 5rem;
+}
+
+.titulo__servicos{
+   margin-bottom: 2rem;
+   font-size: 2rem;
+}
+
+.nome__servicos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.link__aba__servico{
+    text-decoration: none;
+    color: var(--cor_fundo);
+    font-family: var(--fonte_texto);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.imagem__servico{
+    margin-bottom: 0.5rem;
+}
+
+/*fim_serviços_(home_page)*/
+
+/*inicio_rodape*/
+
+.rodape{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 15rem;
+    font-family: var(--fonte_texto);
+    justify-content: space-around;
+}
+
+.imagem__rodape{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    height: 8.125rem;
+}
+
+.itens__rodape{
+    flex: 1;
+}
+
+.copyright{
+    text-align: center;
+    padding-top: 10px;
+    font-family: var(--fonte_texto);
+    color: #444;
+}
+
+/*fim_rodape*/
+
+/*inicio_aba_quem_somos*/
+
+.quem__somos__page{
+    font-family: var(--fonte_texto);
+}
+
+.quem__somos__texto__imagem{
+    background-color: var(--cor_secundaria);
+    padding: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    gap: 10rem;
+    border-radius: 1rem;
+}
+
+.imagem__quem__somos{
+    margin-left: 10rem;
+}
+
+.oque__fazemos{
+    padding: 3rem 0 3rem 0;
+    display: flex;
+    gap: 10rem;
+}
+
+.oque__fazemos__texto{
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin-left: 10rem;
+    gap: 2.5rem;
+    font-size: 2rem;
+}
+
+.homenagem{
+    display: flex;
+    background-color: var(--cor_secundaria);
+    color: #000000;
+    padding: 3rem 0 3rem 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.homenagem__imagem{
+    display: flex;
+    width: 12rem;
+    height: 15rem;
+    margin-bottom: 1rem
+}
+
+.homenagem__texto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 45%;
+    gap: 1rem;
+}
+ /*fim_aba_quem_somos*/
+
+/*inicio_aba_servicos*/
+
+.servicos__page{
+    display: flex;
+    font-family: var(--fonte_texto);
+    flex-direction: column;
+    padding: 3rem 5rem 9rem 5rem;
+    background-color: var(--cor_terciaria);
+    border-radius: 1rem;
+    color: var(--cor_fundo);
+    font-size: 1.3rem;
+}
+
+.servicos__detalhados{
+    display: flex;
+    margin-left: 15rem;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.servicos__detalhados__separacao{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12rem;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.servicos__page__separacao{
+    display: flex;
+    font-family: var(--fonte_texto);
+    background-color: #D3D3D3;
+    color: #000000;
+    border-radius: 1rem;
+    justify-content: right;
+    padding: 3rem 5rem 9rem 5rem;
+    font-size: 1.3rem;
+}
+
+.servicos__imagem{
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.servicos__texto{
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/*fim_aba_servicos*/
+@media (max-width: 800px) {
+  .navegacao__menu {
+    align-items: center;
+    gap: 3.5%;
+    padding: 3% 0;
+  }
+
+  .navegacao__menu a {
+    margin-top: 0;
+  }
+
+  .logo {
+    max-width: 20%;
+  }
+
+  /* Propaganda */
+  .conteudo__propaganda {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .conteudo__propaganda__texto {
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .imagem__inicio {
+    padding: 1rem;
+    width: 70%;
+  }
+
+  /* Quem Somos */
+  .conteudo__quem__somos {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .imagem__sobre__ctc {
+    width: 70%;
+    height: auto;
+  }
+
+  .quem__somos__texto {
+    width: 90%;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Serviços */
+  .servicos__grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 0;
+  }
+
+  .nome__servicos {
+    width: 100%;
+    align-items: center;
+  }
+
+  .link__aba__servico {
+    font-size: 1.2rem;
+  }
+
+  /* Rodapé */
+  .rodape {
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    font-size: 80%;
+  }
+
+  .imagem__rodape {
+    margin-left: 2%;
+    max-width: 20%;
+  }
+
+  .itens__rodape {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* Botão flutuante WhatsApp */
+  .botao__whatsapp {
+    right: 2.3rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 3.5rem;
+  }
+
+  .botao__whatsapp img {
+    width: 150%;
+    height: auto;
+  }
+
+  /* Aba Quem Somos */
+
+  .quem__somos__page {
+    padding: 1rem;
+  }
+
+  /* Seção: Quem Somos */
+  .quem__somos__texto__imagem {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+
+  .imagem__quem__somos {
+    max-width:50%;
+    margin: 0;
+  }
+
+  .quem__somos__texto {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  /* Seção: O que fazemos */
+  .oque__fazemos {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .oque__fazemos__imagem {
+    max-width: 50%;
+  }
+
+  .oque__fazemos__texto {
+    width: 100%;
+    max-width: 90%;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  /* Seção: Homenagem */
+  .homenagem {
+    flex-direction: column;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .homenagem__imagem {
+    width: 25%;
+    margin-bottom: 1rem;
+  }
+
+  .homenagem__texto {
+    width: 100%;
+    gap: 1rem;
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+
+ /* Aba Serviços */
+  .servicos__page,
+  .servicos__page__separacao {
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Serviços com imagem à esquerda */
+  .servicos__detalhados,
+  .servicos__detalhados__separacao {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .servicos__imagem {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .servicos__texto {
+    max-width: 100%;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+  }
+
+  
+
+  /* Ajustes gerais */
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Aba Seleção de Unidades*/
+  .selecao__unidade {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .selecao__unidade__texto {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .container__unidades {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .link__whatsapp {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cor_primaria);
+    color: var(--cor_fundo);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .whatsapp__unidades {
+    width: 100%;
+    height: 3rem;
+    background-size: contain;
+    background-position: center;
+    margin: 0.5rem 0;
+  }
+}
